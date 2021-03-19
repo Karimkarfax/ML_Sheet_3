@@ -78,7 +78,7 @@ def plot_map(cities, neurons, iteration):
 
     plt.title('Iteration #{:06d}'.format(iteration))
     plt.axis('off')
-    plt.savefig('results/{}.png'.format(iteration))
+    #plt.savefig('results/{}.png'.format(iteration))
     plt.clf()
 
 
