@@ -14,7 +14,10 @@ DEFAULTS_EXP = {'uruguay': ('uruguay', 8, 10000, 1000, 500, bubble,
                         ExponentialDecay(194*8/10, 0.997)),
             'djibouti': ('djibouti', 8, 1000, 50, 50, gaussian,
                         ExponentialDecay(0.7, 0.999),
-                        ExponentialDecay(89*8/10, 0.995))}
+                        ExponentialDecay(89*8/10, 0.995)),
+            'regensburg': ('regensburg', 8, 500, 50, 50, gaussian,
+                        ExponentialDecay(0.7, 0.999),
+                        ExponentialDecay(29*8/10, 0.995))}
 
 DEFAULTS_LIN = {'uruguay': ('uruguay', 8, 10000, 1000, 500, gaussian,
                         LinearDecay(0.9, 0.000089),
@@ -105,9 +108,9 @@ def get_input():
     :return radius: radius of neurons to be used
     """
     data_sets = {'w': 'western_sahara', 'q': 'qatar', 'u': 'uruguay',
-                 'd': 'djibouti'}
+                 'd': 'djibouti', 'r': 'regensburg'}
 
-    set_id = input('Data set [w/q/u/d]: ') or 'w'
+    set_id = input('Data set [w/q/u/d/r]: ') or 'w'
     data_set = data_sets[set_id]
 
     if not os.path.isfile('assets/{}.txt'.format(data_set)):
