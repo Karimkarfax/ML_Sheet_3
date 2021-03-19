@@ -15,7 +15,7 @@ DEFAULTS_EXP = {'uruguay': ('uruguay', 8, 10000, 1000, 500, bubble,
             'djibouti': ('djibouti', 8, 1000, 50, 50, gaussian,
                         ExponentialDecay(0.7, 0.999),
                         ExponentialDecay(89*8/10, 0.995)),
-            'regensburg': ('rgbg_beergardens', 8, 500, 50, 50, gaussian,
+            'rgbg_beergardens': ('rgbg_beergardens', 8, 500, 50, 50, gaussian,
                         ExponentialDecay(0.7, 0.999),
                         ExponentialDecay(17*8/10, 0.995))}
 
@@ -31,7 +31,7 @@ DEFAULTS_LIN = {'uruguay': ('uruguay', 8, 10000, 1000, 500, gaussian,
             'djibouti': ('djibouti', 8, 5000, 50, 50, gaussian,
                         LinearDecay(0.7, 0.0001),
                         LinearDecay(89*8/10, 0.014)),
-            'regensburg': ('rgbg_beergardens', 8, 500, 50, 50, gaussian,
+            'rgbg_beergardens': ('rgbg_beergardens', 8, 500, 50, 50, gaussian,
                         LinearDecay(0.7, 0.001))}
 
 DEFAULT_STA = {'uruguay': ('uruguay', 8, 10000, 1000, 200, gaussian,
@@ -46,7 +46,7 @@ DEFAULT_STA = {'uruguay': ('uruguay', 8, 10000, 1000, 200, gaussian,
             'djibouti': ('djibouti', 4, 5000, 1000, 200, gaussian,
                         StaticDecay(0.2),
                         StaticDecay(10)),
-            'regensburg': ('rgbg_beergardens', 6, 5000, 1000, 200, gaussian,
+            'rgbg_beergardens': ('rgbg_beergardens', 6, 5000, 1000, 200, gaussian,
                         StaticDecay(0.3),
                         StaticDecay(5))}
 
