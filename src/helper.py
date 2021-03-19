@@ -14,7 +14,10 @@ DEFAULTS_EXP = {'uruguay': ('uruguay', 8, 10000, 1000, 500, bubble,
                         ExponentialDecay(194*8/10, 0.997)),
             'djibouti': ('djibouti', 8, 1000, 50, 50, gaussian,
                         ExponentialDecay(0.7, 0.999),
-                        ExponentialDecay(89*8/10, 0.995))}
+                        ExponentialDecay(89*8/10, 0.995)),
+            'regensburg': ('rgbg_beergardens', 8, 500, 50, 50, gaussian,
+                        ExponentialDecay(0.7, 0.999),
+                        ExponentialDecay(17*8/10, 0.995))}
 
 DEFAULTS_LIN = {'uruguay': ('uruguay', 8, 10000, 1000, 500, gaussian,
                         LinearDecay(0.9, 0.000089),
@@ -27,7 +30,9 @@ DEFAULTS_LIN = {'uruguay': ('uruguay', 8, 10000, 1000, 500, gaussian,
                         LinearDecay(194*8/10, 0.015)),
             'djibouti': ('djibouti', 8, 5000, 50, 50, gaussian,
                         LinearDecay(0.7, 0.0001),
-                        LinearDecay(89*8/10, 0.014))}
+                        LinearDecay(89*8/10, 0.014)),
+            'regensburg': ('rgbg_beergardens', 8, 500, 50, 50, gaussian,
+                        LinearDecay(0.7, 0.001)}
 
 DEFAULT_STA = {'uruguay': ('uruguay', 8, 10000, 1000, 200, gaussian,
                         StaticDecay(0.4),
@@ -40,7 +45,10 @@ DEFAULT_STA = {'uruguay': ('uruguay', 8, 10000, 1000, 200, gaussian,
                         StaticDecay(50)),
             'djibouti': ('djibouti', 4, 5000, 1000, 200, gaussian,
                         StaticDecay(0.2),
-                        StaticDecay(10))}
+                        StaticDecay(10)),
+            'regensburg': ('rgbg_beergardens', 6, 5000, 1000, 200, gaussian,
+                        StaticDecay(0.3),
+                        StaticDecay(5))}
 
 plt.figure()
 
@@ -105,9 +113,9 @@ def get_input():
     :return radius: radius of neurons to be used
     """
     data_sets = {'w': 'western_sahara', 'q': 'qatar', 'u': 'uruguay',
-                 'd': 'djibouti'}
+                 'd': 'djibouti', 'r': 'regensburg'}
 
-    set_id = input('Data set [w/q/u/d]: ') or 'w'
+    set_id = input('Data set [w/q/u/d/r]: ') or 'w'
     data_set = data_sets[set_id]
 
     if not os.path.isfile('assets/{}.txt'.format(data_set)):
