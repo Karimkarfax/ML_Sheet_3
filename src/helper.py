@@ -32,7 +32,7 @@ DEFAULTS_LIN = {'uruguay': ('uruguay', 8, 10000, 1000, 500, gaussian,
                         LinearDecay(0.7, 0.0001),
                         LinearDecay(89*8/10, 0.014)),
             'regensburg': ('rgbg_beergardens', 8, 500, 50, 50, gaussian,
-                        LinearDecay(0.7, 0.001)}
+                        LinearDecay(0.7, 0.001))}
 
 DEFAULT_STA = {'uruguay': ('uruguay', 8, 10000, 1000, 200, gaussian,
                         StaticDecay(0.4),
