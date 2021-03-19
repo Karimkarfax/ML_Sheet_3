@@ -94,7 +94,7 @@ def read_data(filename):
     """
     cities = []
 
-    path = 'assets/{}.txt'.format(filename)
+    path = '/content/ML_Sheet_3/assets/{}.txt'.format(filename)
     with open(path, 'r') as f:
         for line in f:
             city = list(map(float, line.split()[1:]))
@@ -118,7 +118,7 @@ def get_input():
     set_id = input('Data set [w/q/u/d/r]: ') or 'w'
     data_set = data_sets[set_id]
 
-    if not os.path.isfile('assets/{}.txt'.format(data_set)):
+    if not os.path.isfile('/content/ML_Sheet_3/assets/{}.txt'.format(data_set)):
         exit("Did not find this data set file!")
 
     use_defaults = input('Do you want to use default parameters? (y/n) ') == 'y'
