@@ -113,7 +113,7 @@ def get_input():
     :return radius: radius of neurons to be used
     """
     data_sets = {'w': 'western_sahara', 'q': 'qatar', 'u': 'uruguay',
-                 'd': 'djibouti', 'r': 'regensburg'}
+                 'd': 'djibouti', 'r': 'rgbg_beergardens'}
 
     set_id = input('Data set [w/q/u/d/r]: ') or 'w'
     data_set = data_sets[set_id]
